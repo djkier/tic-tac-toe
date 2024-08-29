@@ -1,1 +1,11 @@
-node_modules
+# Ignore node_modules
+node_modules/
+
+# Ignore .map files
+*.map
+
+# Optional: Ignore the package-lock.json
+# package-lock.json
+
+# Optional: Ignore input.scss if it's temporary
+input.scss
