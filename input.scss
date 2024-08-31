@@ -1,13 +1,22 @@
-//RESET
+// Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-$font-stack: "Poppins", sans-serif;
 
+
+$font-stack: "Poppins", sans-serif;
+$bor: 1px solid black;
+$rose: rgba(212,20,90,1);
+$sunshine: rgba(251,176,59,1);
+$light: white;
+$dark: black;
+
+
+//RESET
 *, *::before, *::after {
     box-sizing: border-box;
 }
 * {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-stack;
 }
 body {
     line-height: 1.5;
@@ -30,23 +39,151 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
+    grid-template-rows: 4rem 1fr;
     place-items: center;
-
+    overflow: hidden;
+    background: linear-gradient(30deg, $rose 0%, $sunshine 100%);
+    
 }
 
+header {
+    background-color: $light;
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    h1 {
+        font-size: 3rem;
+        color: $rose;
+        padding: 0;
+
+    }
+}
+
+h1 {
+    font-weight: 800;
+}
+
+button {
+    border: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem 2rem;
+
+
+
+    h1 {
+        color: $light;
+        font-size: 2rem;
+        grid-column: 1/ 4;
+        text-align: center;
+  
+    }
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    height: 25rem;
+
+
+    h2, h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    
+    input[type='text'] {
+        background-color: transparent;
+        font-size: 2rem;
+        border: 0;
+        border-bottom: 1px solid black;
+        width: 14rem;
+        outline: none;
+        font-weight: 800;
+    }
+
+    ::placeholder {
+        font-weight: 800;
+        color: $dark;
+    }
+
+    figcaption {
+        font-size: 0.8rem;
+    }
+
+    div:last-child{
+
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+
+        h3:last-child {
+            font-size: 5rem;
+            color: $light;
+        }
+        
+    }
+}
+
+button {
+    background-color: $light;
+    cursor: pointer;
+    transition: transform 200ms ;
+    border-radius: 0.5rem;
+    color: $dark;
+}
+
+
+
 #gameBoardContainer {
-    background-color: black;
-    outline: 1px solid black;
+    justify-self: center;
+  
     height: 30rem;
     width: 30rem;
+
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     gap: 0.5rem;
     color: black;
- 
+
+
+    button {
+        font: 6rem $font-stack;
+        font-weight: 700;
+    }
+
     
 }
 
-button {
-    font: $font-stack;
+
+#textbox {
+    grid-column: 2 / 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        border-radius: 0.6rem;
+        border: $bor;
+        font-weight: 500;
+
+
+    }
+
+
+}
+
+
+#play-again {
+    visibility: hidden;
 }

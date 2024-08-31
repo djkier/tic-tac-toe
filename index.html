@@ -13,12 +13,39 @@
         <h1>Tic-Tac-Toe</h1>
     </header>
     <main>
-        <button id="reset">reset</button>
-        
+        <h1>Play</h1>
+        <div id="player-one" class="players">
+            <div>
+                <input type="text" autocomplete="off" name="player-one-name" id="player-one-name" placeholder="Player 1" minlength="1" maxlength="8" value="Player 1">
+                <figcaption>Edit name</figcaption>
+            </div>
+            <div>
+                <h3>Score</h3>
+                <h3 id="player-one-score">0</h3>
+            </div>
+            
+        </div>
+
         <div id="gameBoardContainer">
         </div>
 
-        <h1>Start</h1>
+        <div id="player-two" class="players">
+            <div>
+                <input type="text" autocomplete="off" name="player-two-name" id="player-two-name" placeholder="Player 2" minlength="1" maxlength="8" value="Player 2">
+                <figcaption>Edit name</figcaption>
+            </div>
+            <div>
+                <h3>Score</h3>
+                <h3 id="player-two-score">0</h3>
+            </div>
+        </div>
+
+        <div id='textbox'>
+            <button id="reset">Reset</button>
+            <button id="play-again">Play Again?</button>
+
+        </div>
+        
     </main>
     
     
