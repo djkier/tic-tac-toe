@@ -148,6 +148,7 @@ function createButton(val){
             winner(playerTwo)
         }else if(playerOne.picked.length + playerTwo.picked.length === 9) {
             playAgainBtn.style.visibility = 'visible';
+            head.textContent = "Draw";
         }
 
 
